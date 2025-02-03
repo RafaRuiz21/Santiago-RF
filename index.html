@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASINO RED-FORTUNA</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1332091301261117');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1332091301261117&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            color: #f5f5f5;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            box-sizing: border-box;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: #ffdf00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .info {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        input[type="text"] {
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: white;
+            background: linear-gradient(45deg, #ff0000, #d400d4);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #d400d4, #ff0000);
+            transform: scale(1.05);
+        }
+
+        .details {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #f5f5f5;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .info {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .details {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CASINO REDFORTUNA</h1>
+        <p class="info">Para crear tu cuenta, escribe tu nombre y envíanos un WhatsApp haciendo clic en el botón de abajo.</p>
+        <input type="text" placeholder="Ingresa tu nombre" id="name">
+        <a class="btn" id="whatsapp-link" href="#">Crear tu Usuario</a>
+        <div class="details">
+            <p>Mínimo de carga: $1000</p>
+            <p>Mínimo retiro: $5000</p>
+            <p>Retiros de hasta $500,000 diarios</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('whatsapp-link').addEventListener('click', function () {
+            const name = document.getElementById('name').value;
+            const phone = '+5493844458234';
+
+            // Evento de seguimiento para Meta Pixel
+            fbq('track', 'Contact');
+
+            if (name) {
+                const url = `https://wa.me/${phone}?text=Hola, mi nombre es ${encodeURIComponent(name)} y quiero crear mi usuario en Red Fortuna.`;
+                this.setAttribute('href', url);
+            } else {
+                alert('Por favor, ingresa tu nombre antes de continuar.');
+            }
+        });
+    </script>
+</body>
+</html>
